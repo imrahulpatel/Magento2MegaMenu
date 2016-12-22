@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="../../../Backend/etc/menu.xsd">
+    <menu>
+        <add id="Jnext_Megamenu::main_menu" title="Jnext Megamenu" 
+            module="Jnext_Megamenu" sortOrder="20" 
+            resource="Jnext_Megamenu::megamenu" />
+        <add id="Jnext_Megamenu::manage_item" title="Manage Megamenu" 
+            module="Jnext_Megamenu" sortOrder="2" parent="Jnext_Megamenu::main_menu" 
+            action="catalog/category/" resource="Jnext_Megamenu::manage_item" />
+        <add id="Jnext_Megamenu::configuration" title="Configurations" 
+            module="Jnext_Megamenu" sortOrder="3" parent="Jnext_Megamenu::main_menu" 
+            action="adminhtml/system_config/edit/section/jnext_mega_config" 
+            resource="Jnext_Megamenu::configuration" />
+    </menu>
+</config>

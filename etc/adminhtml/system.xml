@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="jnext_config" translate="label" sortOrder="200">
+            <label>Jnext Megamenu</label>
+        </tab>
+        <section id="jnext_mega_config" translate="label" type="text" sortOrder="42" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Settings</label>
+            <tab>jnext_config</tab>
+            <resource>Jnext_Megamenu::jnext_mega_config</resource>  
+            <group id="general" translate="label" sortOrder="92" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <comment></comment>
+                <field id="enabledisable" translate="label" type="select" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment></comment>
+                </field>
+            </group>
+            <group id="category_labels" translate="label" sortOrder="92" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Category Labels</label>
+                <comment>These category labels will be selectable from &lt;b&gt;Products &gt; Inventory &gt; Categories &gt; Megamenu tab &lt;/b&gt;</comment>
+                <field id="category_label1" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Label 1</label>
+                    <comment></comment>
+                </field>
+                <field id="category_label1_bgcolor" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <comment></comment>
+                    <frontend_model>Jnext\Megamenu\Block\Color</frontend_model>
+                </field>
+                <field id="category_label2" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Label 2</label>
+                    <comment></comment>
+                </field>
+                <field id="category_label2_bgcolor" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <comment></comment>
+                    <frontend_model>Jnext\Megamenu\Block\Color</frontend_model>
+                </field>
+                <field id="category_label3" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Label 3</label>
+                    <comment></comment>
+                </field>
+                <field id="category_label3_bgcolor" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <comment></comment>
+                    <frontend_model>Jnext\Megamenu\Block\Color</frontend_model>
+                </field>
+                <field id="category_label4" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="0" showInStore="0">
+                    <label>Label 4</label>
+                    <comment></comment>
+                </field>
+                <field id="category_label4_bgcolor" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Background Color</label>
+                    <comment></comment>
+                    <frontend_model>Jnext\Megamenu\Block\Color</frontend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
