@@ -1,4 +1,5 @@
 # Jnext Magento2 MegaMenu
+<h3>Features</h3>
 <ul>
 	<li>Compatible with both Magento2 series 2.0 (latest version 2.0.11) and 2.1 (latest version 2.1.3)</li>
 	<li>The plugin is one of the best ways to improve usability and navigation of your online store.</li>
@@ -9,6 +10,9 @@
 	<li>Auto converts to default menu in tablet and smaller devices</li>
 	<li>Attracts visitors' attention at first sight with great design</li>
 	<li>Easy to use even without coding skills</li>
+</ul>
+<h3>Usage</h3>
+<ol>
 	<li>Easy navigation menu at left side having 2 submenus "Manage Megamenu" and "Configurations"
 		<ol>
 			<li>Manage Megamenu: Redirects to "Manage Categories" having "Megamenu" tab added
@@ -30,4 +34,4 @@
 			</li>
 		</ol>
 	</li>
-</ul>
+</ol>
