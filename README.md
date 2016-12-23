@@ -12,26 +12,34 @@
 	<li>Easy to use even without coding skills</li>
 </ul>
 <h3>Usage</h3>
+<p>Easy navigation menu at left side having 2 submenus "Manage Megamenu" and "Configurations"</p>
 <ol>
-	<li>Easy navigation menu at left side having 2 submenus "Manage Megamenu" and "Configurations"
-		<ol>
-			<li>Manage Megamenu: Redirects to "Manage Categories" having "Megamenu" tab added
-				<ul>
-					<li>Can configure selected categories as mega-menu and rest as default-menu as per admin convenience</li>
-					<li>Flexibility to select from different sections top, left, right and bottom</li>
-					<li>Flexibility to display eighter static/dynamic content from already created static block or can add manual html using magento standard WYSIWYG Editor</li>
-					<li>Can select width of left, right sections and whole-menu from all possible volume in percentage</li>
-					<li>Can upload extra category image named category thumbnail image</li>
-					<li>Left section has options to display like subcategories menu, subcategories expanded (all children categories visible) and subcategories with category thumbnail</li>
-					<li>Selection of category label configured earlier like SALE, NEW, HOT etc.</li>
-				</ul>
-			</li>
-			<li>Configurations: Redirects to sytem configuration to configure the plugin like:
-				<ul>
-					<li>Enable/Disable the plugin</li>
-					<li>Add category label with nice gui of color picker for category label</li>
-				</ul>
-			</li>
-		</ol>
+	<li>Manage Megamenu: Redirects to "Manage Categories" having "Megamenu" tab added
+		<ul>
+			<li>Can configure selected categories as mega-menu and rest as default-menu as per admin convenience</li>
+			<li>Flexibility to select from different sections top, left, right and bottom</li>
+			<li>Flexibility to display eighter static/dynamic content from already created static block or can add manual html using magento standard WYSIWYG Editor</li>
+			<li>Can select width of left, right sections and whole-menu from all possible volume in percentage</li>
+			<li>Can upload extra category image named category thumbnail image</li>
+			<li>Left section has options to display like subcategories menu, subcategories expanded (all children categories visible) and subcategories with category thumbnail</li>
+			<li>Selection of category label configured earlier like SALE, NEW, HOT etc.</li>
+		</ul>
+	</li>
+	<li>Configurations: Redirects to sytem configuration to configure the plugin like:
+		<ul>
+			<li>Enable/Disable the plugin</li>
+			<li>Add category label with nice gui of color picker for category label</li>
+		</ul>
 	</li>
 </ol>
+<h3>Install</h3>
+<p>This package is registered on <a href="https://packagist.org/packages/genmato/sample">Packagist</a> for easy installation. In your Magento installation root run:</p>
+<p><code>composer require jnext/megamenu</code></p>
+<p>This will install the latest version in your Magento installation, when completed run:</p>
+<pre><code>php bin/magento module:enable Jnext_Megamenu
+
+php bin/magento setup:upgrade
+
+php bin/magento cache:clean
+</code></pre>
+<p>This will enable the extension and run the Schema and Data scripts to create the database and insert a sample record.</p>
