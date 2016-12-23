@@ -33,7 +33,7 @@
 	</li>
 </ol>
 <h3>Install</h3>
-<p>This package is registered on <a href="https://packagist.org/packages/genmato/sample">Packagist</a> for easy installation. In your Magento installation root run:</p>
+<p>This package is registered on <a href="https://packagist.org/packages/jnext/megamenu">Packagist</a> for easy installation. In your Magento installation root run:</p>
 <p><code>composer require jnext/megamenu</code></p>
 <p>This will install the latest version in your Magento installation, when completed run:</p>
 <pre><code>php bin/magento module:enable Jnext_Megamenu
