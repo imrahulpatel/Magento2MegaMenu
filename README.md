@@ -1,4 +1,4 @@
-# Magento2MegaMenu
+# Jenxt Magento2 MegaMenu
 <ul><li>Compatible with both Magento2 series 2.0 (latest version 2.0.11) and 2.1 (latest version 2.1.3)</li>
 <li>The plugin is one of the best ways to improve usability and navigation of your online store.</li>
 <li>Without high technical knowledge, Easy Mega Menu give you the ability to create an organized menu</li>
