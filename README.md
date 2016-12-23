@@ -42,4 +42,4 @@ php bin/magento setup:upgrade
 
 php bin/magento cache:clean
 </code></pre>
-<p>This will enable the extension and run the Schema and Data scripts to create the database and insert a sample record.</p>
+<p>This will enable the extension and installs Megamenu tab with fields under Manage Categories</p>
