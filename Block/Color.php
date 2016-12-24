@@ -1,10 +1,6 @@
 <?php
-#File: app/code/Jnext/Megamenu/Block/Color.php
-
 namespace Jnext\Megamenu\Block;
-
-class Color extends \Magento\Config\Block\System\Config\Form\Field {
-
+class Color extends \Magento\Config\Block\System\Config\Form\Field {    
     /**
      * @param \Magento\Backend\Block\Template\Context $context
      * @param Registry $coreRegistry

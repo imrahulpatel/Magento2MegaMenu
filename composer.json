@@ -9,11 +9,7 @@
   ],
   "require": {
     "php": "~5.5.0|~5.6.0|~7.0.0",
-<<<<<<< HEAD
     "magento/framework": "~100.0.4"
-=======
-    "magento/magento-composer-installer": "*"
->>>>>>> b1c36f6899116474b06b4250fd07121d69eed1a6
   },
   "authors": [
     {

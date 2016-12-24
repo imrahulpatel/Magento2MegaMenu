@@ -42,8 +42,4 @@ php bin/magento setup:upgrade
 
 php bin/magento cache:clean
 </code></pre>
-<<<<<<< HEAD
 <p>This will enable the extension and installs Megamenu tab with fields under Manage Categories</p>
-=======
-<p>This will enable the extension and installs Megamenu tab with fields under Manage Categories</p>
->>>>>>> b1c36f6899116474b06b4250fd07121d69eed1a6
