@@ -1,10 +1,6 @@
 <?php
-#File: app/code/Jnext/Megamenu/Block/Color.php
-
 namespace Jnext\Megamenu\Block;
-
-class Color extends \Magento\Config\Block\System\Config\Form\Field {
-
+class Color extends \Magento\Config\Block\System\Config\Form\Field {    
     /**
      * @param \Magento\Backend\Block\Template\Context $context
      * @param Registry $coreRegistry
@@ -21,7 +17,7 @@ class Color extends \Magento\Config\Block\System\Config\Form\Field {
         $value = $element->getData('value');
 
         $html .= '<script type="text/javascript">
-            require(["jquery"], function ($) {
+            require(["jquery","jquery/colorpicker/js/colorpicker"], function ($) {
                 $(document).ready(function () {
                     var $el = $("#' . $element->getHtmlId() . '");
                     $el.css("backgroundColor", "'. $value .'");

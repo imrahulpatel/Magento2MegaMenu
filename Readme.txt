@@ -1,4 +1,4 @@
-Plugin Name: Magento2 Megamenu
+Plugin Name: Jnext Megamenu
 Company: Jnext Development
-Developer: JnextTeam
-Compatible: Magento ce 2.0.9, 2.1.0
+Developer: Jnext Magento Team
+Compatible: Magento CE 2.0.11, Magento CE 2.1.3

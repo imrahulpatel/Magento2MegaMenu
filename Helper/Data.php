@@ -1,8 +1,4 @@
 <?php
-/**
- * Copyright © 2015 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
 namespace Jnext\Megamenu\Helper;
 
 use Magento\Customer\Model\Session as CustomerSession;
@@ -14,7 +10,6 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
  */
 class Data extends \Magento\Framework\App\Helper\AbstractHelper
 {
-
     /**
      * @var CustomerSession
      */

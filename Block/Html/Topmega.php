@@ -1,8 +1,4 @@
 <?php
-/**
- * Copyright © 2015 Magento. All rights reserved.
- * See COPYING.txt for license details.
- */
 namespace Jnext\Megamenu\Block\Html;
 
 use Magento\Framework\DataObject\IdentityInterface;
@@ -184,9 +180,10 @@ class Topmega extends Topmenu
     protected function _addSubMenu2($child, $childLevel, $childrenWrapClass, $limit)
     {
         $html = '';
-        if (!$child->hasChildren()) {
+
+        /*if (!$child->hasChildren()) {
             return $html;
-        }
+        }*/
 
         $colStops = null;
         if ($childLevel == 0 && $limit) {
@@ -225,9 +222,14 @@ class Topmega extends Topmenu
                     $option .= ' sub_expanded';
                 $callParentSubmenu = false;
                 $html .= '<div class="leftblock megamenu-block'.' '.$option.' '.$width.'">';
-                $html .= '<ul class="level' . $childLevel . ' submenu">';
-                    $html .= $this->_getHtml($child, $childrenWrapClass, $limit, $colStops);
-                $html .= '</ul>';
+                if($child->hasChildren())
+                {
+                    $html .= '<ul class="level' . $childLevel . ' submenu">';
+                        $html .= $this->_getHtml($child, $childrenWrapClass, $limit, $colStops);
+                    $html .= '</ul>';
+                }
+                else
+                    $html .= '<div class="message info empty"><div>We can\'t find categories matching the selection.</div></div>';
                 $html .= '</div>';
             }
             elseif($option=='only_static_block' && $this->category->getMegaLeftBlockId()!='')
@@ -331,7 +333,7 @@ class Topmega extends Topmenu
                 $child->getName()
             ) . '</span>';
             
-            if($this->category->getMegaDisplayLeftBlock()=='sub_expanded_with_image')
+            /*if($this->category->getMegaDisplayLeftBlock()=='sub_expanded_with_image')
             {
                 list($first,$second,$id) = explode('-', $child->getId());
                 $cat = $this->categoryFactory->create();
@@ -340,7 +342,7 @@ class Topmega extends Topmenu
                     if($cat->getMegaCategoryThumbnailImage() && $child->getLevel()>0)
                         $html .= '<img src="'.$this->categoryMediaUrl.$cat->getMegaCategoryThumbnailImage().'" alt="'.$child->getName().'" />';
                 }
-            }
+            }*/
 
             $html .= '</a>' . $this->_addSubMenu(
                 $child,

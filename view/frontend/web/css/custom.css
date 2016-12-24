@@ -3,9 +3,22 @@
     .navigation #dm {display: block;}
 }
 @media only screen and (min-width: 960px) {
-	.megamenu li.level0.mega {position: static;}
+	.navigation .megamenu {display: block;}
+    .navigation #dm {display: none;}
+
+    .megamenu li.level0.mega {position: static;}
 	.megamenu li.level0 a.level-top + .megamenu-wrapper
-	{display: none;  position: absolute; left: 0; top: 45px; background: #fff; z-index: 999; border: 1px solid #ccc; padding: 15px 15px 0px; min-width: 230px}
+	{
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 45px;
+        background: #fff;
+        z-index: 999;
+        border: 1px solid #ccc;
+        padding: 15px 15px 0px;
+        min-width: 230px
+    }
 	.megamenu li.level0 a.level-top + .megamenu-wrapper.width_standard {width: 95%; }
     .megamenu li.level0 a.level-top + .megamenu-wrapper.width_20 {width: 20%; }
     .megamenu li.level0 a.level-top + .megamenu-wrapper.width_30 {width: 30%; }
@@ -46,8 +59,8 @@
         top: 16px;
         width: 0;
     }
-    .megamenu li.level0.mega.parent > a::after,
-    .megamenu li.level0.mega.parent ul.level1 > li.parent > a > span:not(.ui-icon)::after
+    .megamenu li.level0.mega > a::after,
+    .megamenu li.level0.mega.parent ul.level1 > li.parent > a > span:not(.ui-icon):after
     {
         color: inherit;
         content: '\e622';
@@ -104,8 +117,7 @@
     .megamenu li.level0 a.level-top + .megamenu-wrapper .leftblock.width_90
     + .rightblock.width_standard {width: 8%; }
     .megamenu li.level0 a.level-top + .megamenu-wrapper .leftblock.width_100
-    + .rightblock.width_standard {width: 100%; }
-    
+    + .rightblock.width_standard {width: 100%; }    
 
 	.megamenu li.level0 a.level-top.ui-state-focus + .megamenu-wrapper {display: block !important;}
 	.megamenu li.level0 a.level-top.ui-state-active + .megamenu-wrapper {display: block !important;}
@@ -114,7 +126,8 @@
     .megamenu li.level0 a.level-top.ui-state-active {color: #ff5501}
 
 	/*sub categories expanded*/
-    .megamenu .leftblock.sub_expanded ul.level0 > li.parent > a {font-weight: 600; color: #000; text-align: center; min-width: 100px}
+    .megamenu .leftblock.sub_expanded ul.level0 > li.parent > a
+    {font-weight: 600; color: #000; text-align: center; min-width: 100px}
 	.megamenu .leftblock.sub_expanded ul.level0 > li
 	{display: inline-block; vertical-align: top; float: none; margin: 0 1% 1% 0}
     .megamenu .leftblock.sub_expanded > ul {border: none; box-shadow: none}
@@ -123,11 +136,11 @@
 	.megamenu .leftblock.sub_expanded ul.level2 {z-index: 2}
     .megamenu .leftblock.sub_expanded li.level2 a:before
     {content: '\e619'; font-family: "luma-icons"; font-size: 8px; font-weight: normal; padding-right: 5px; color: silver; }
-
     
     /*sub categories expanded with image*/
     .megamenu .leftblock.sub_expanded_with_image ul.level1 {width: 90%}
-    .megamenu .leftblock.sub_expanded_with_image ul.level1 > li {display: inline-block; vertical-align: top; min-width: 145px}
+    .megamenu .leftblock.sub_expanded_with_image ul.level1 > li
+    {display: inline-block; vertical-align: top; min-width: 145px}
     .megamenu .leftblock.sub_expanded_with_image ul.level0 li.level1 {display: flex;}
     .megamenu .leftblock.sub_expanded_with_image ul.level0 li.level1 a img
     {border: 1px solid #ccc; border-radius: 5px; display: table; height: 100px; width: 100px; margin: 10px 0px;}
