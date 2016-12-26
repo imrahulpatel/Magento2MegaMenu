@@ -152,4 +152,6 @@
     .megamenu .leftblock.sub_menu > ul > li.parent > a > span.ui-icon:after
     {content: '\e619'; line-height: 20px; float: right; font-family: "luma-icons"; font-size: 10px;}
     .navigation .megamenu .level0 .submenu {z-index: 9}
+    .megamenu li.level0 ul.level0 {min-width: initial;}
+    .megamenu .mega .sub_expanded_with_image ul.level0 .submenu {min-width: initial;}
 }
