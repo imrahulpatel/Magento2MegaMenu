@@ -20,6 +20,7 @@ class Topmega extends Topmenu
     protected $menuType;
     protected $extraClass;
     protected $category;
+    protected $parentId;
     protected $categoryHelper;
     protected $storeManager;
     protected $currentStore;
@@ -118,6 +119,7 @@ class Topmega extends Topmenu
         $this->currentStore = $this->storeManager->getStore();
         $this->mediaUrl = $this->currentStore->getBaseUrl(\Magento\Framework\UrlInterface::URL_TYPE_MEDIA);
         $this->categoryMediaUrl = $this->mediaUrl."catalog/category/";
+        $this->parentId = false;
     }
     
     /**
@@ -333,7 +335,11 @@ class Topmega extends Topmenu
                 $child->getName()
             ) . '</span>';
             
-            /*if($this->category->getMegaDisplayLeftBlock()=='sub_expanded_with_image')
+            if($parentLevel==0 && $menuTree->getId())
+            {
+                $this->parentId = substr($menuTree->getId(), strrpos($menuTree->getId(), '-') + 1);
+            }
+            if($this->parentId && $this->category && $this->category->getMegaDisplayLeftBlock()!='no' && $this->category->getMegaDisplayLeftBlock()!=null && $this->category->getMegaDisplayLeftBlock()=='sub_expanded_with_image')
             {
                 list($first,$second,$id) = explode('-', $child->getId());
                 $cat = $this->categoryFactory->create();
@@ -342,7 +348,7 @@ class Topmega extends Topmenu
                     if($cat->getMegaCategoryThumbnailImage() && $child->getLevel()>0)
                         $html .= '<img src="'.$this->categoryMediaUrl.$cat->getMegaCategoryThumbnailImage().'" alt="'.$child->getName().'" />';
                 }
-            }*/
+            }
 
             $html .= '</a>' . $this->_addSubMenu(
                 $child,
