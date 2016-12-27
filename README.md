@@ -43,4 +43,7 @@ php bin/magento setup:upgrade
 php bin/magento cache:clean
 </code></pre>
 <p>This will enable the extension and installs Megamenu tab with fields under Manage Categories</p>
-<p><strong>Note: </strong>If you find <tt>Could not find package jnext/megamenu at any version for your minimum-stability (alpha). Check the package spelling or your minimum-stability</tt> error, edit your composer.json file located at root of your project by setting "minimum-stability": from "alpha" to "dev"</p>
+<h3>Note:</h3>
+<p>If you find error like</p>
+<p><tt>Could not find package jnext/megamenu at any version for your minimum-stability (alpha). Check the package spelling or your minimum-stability</tt></p>
+<p>To resolve edit your composer.json file located at root of your project by setting "minimum-stability": from "alpha" to "dev"</p>
