@@ -147,7 +147,7 @@
 
     /*sub categories menu*/
     .megamenu .leftblock.sub_menu > ul > li > a {padding: 10px 20px; }
-    .megamenu .leftblock.sub_menu > ul > li {border-bottom: 1px solid #ccc; margin: 0; }
+    .megamenu .leftblock.sub_menu > ul > li {border-bottom: 1px solid #ccc; margin: 0; position: relative;}
     .megamenu .leftblock.sub_menu > ul > li:last-child {border-bottom: none;}
     .megamenu .leftblock.sub_menu > ul > li.parent > a > span.ui-icon:after
     {content: '\e619'; line-height: 20px; float: right; font-family: "luma-icons"; font-size: 10px;}
