@@ -3,7 +3,8 @@
     .navigation #dm {display: block;}
 }
 @media only screen and (min-width: 960px) {
-	.navigation .megamenu {display: block;}
+    .navigation .megamenu {display: block; }
+    .navigation .megamenu .megamenu-wrapper {border-radius: 5px;}
     .navigation #dm {display: none;}
 
     .megamenu li.level0.mega {position: static;}
@@ -19,7 +20,7 @@
         padding: 15px 15px 0px;
         min-width: 230px
     }
-	.megamenu li.level0 a.level-top + .megamenu-wrapper.width_standard {width: 95%; }
+    .megamenu li.level0 a.level-top + .megamenu-wrapper.width_standard {width: 95%; }
     .megamenu li.level0 a.level-top + .megamenu-wrapper.width_20 {width: 20%; }
     .megamenu li.level0 a.level-top + .megamenu-wrapper.width_30 {width: 30%; }
     .megamenu li.level0 a.level-top + .megamenu-wrapper.width_40 {width: 40%; }
@@ -33,7 +34,6 @@
 	{ margin-bottom: 20px; display: inline-block; float: left; vertical-align: top;}
 	.megamenu li.level0 a.level-top + .megamenu-wrapper .topblock {width: 100%}
 	.megamenu li.level0 a.level-top + .megamenu-wrapper .bottomblock {width: 100%}
-
     .megamenu .cat-label {
         color: #fff;
         font-size: 10px;
@@ -59,27 +59,11 @@
         top: 16px;
         width: 0;
     }
-    .megamenu li.level0.mega > a::after,
-    .megamenu li.level0.mega.parent ul.level1 > li.parent > a > span:not(.ui-icon):after
-    {
-        color: inherit;
-        content: '\e622';
-        display: inline-block;
-        font-family: "luma-icons";
-        font-size: 10px;
-        font-weight: normal;
-        line-height: 12px;
-        margin: 0 0 0 5px;
-        overflow: hidden;
-        text-align: center;
-        vertical-align: middle;
-    }
-
-	/*----------------------------LEFT----------------------------*/
+    /*----------------------------LEFT----------------------------*/
     .megamenu .leftblock {margin: 0 2% 2% 0;}
     .megamenu li.level0 a.level-top + .megamenu-wrapper .leftblock .level0.submenu
     {display: block !important; position: relative !important; box-shadow: none;}
-    .megamenu .leftblock ul.level1 li {margin-bottom: 0px}
+    .megamenu .leftblock .submenu.level1 li {margin-bottom: 0px}
     .megamenu li.level0 a.level-top + .megamenu-wrapper .leftblock.width_standard {width: 20%; }
     .megamenu li.level0 a.level-top + .megamenu-wrapper .leftblock.width_20 {width: 20%; }
     .megamenu li.level0 a.level-top + .megamenu-wrapper .leftblock.width_30 {width: 30%; }
@@ -119,39 +103,52 @@
     .megamenu li.level0 a.level-top + .megamenu-wrapper .leftblock.width_100
     + .rightblock.width_standard {width: 100%; }    
 
-	.megamenu li.level0 a.level-top.ui-state-focus + .megamenu-wrapper {display: block !important;}
-	.megamenu li.level0 a.level-top.ui-state-active + .megamenu-wrapper {display: block !important;}
+    .megamenu li.level0 a.level-top.ui-state-focus + .megamenu-wrapper {display: block !important;}
+    .megamenu li.level0 a.level-top.ui-state-active + .megamenu-wrapper {display: block !important;}
     .megamenu .megamenu-block > p {margin-bottom: 0; }
     .megamenu li.level0 a.level-top.ui-state-focus,
     .megamenu li.level0 a.level-top.ui-state-active {color: #ff5501}
 
-	/*sub categories expanded*/
-    .megamenu .leftblock.sub_expanded ul.level0 > li.parent > a
-    {font-weight: 600; color: #000; text-align: center; min-width: 100px}
-	.megamenu .leftblock.sub_expanded ul.level0 > li
-	{display: inline-block; vertical-align: top; float: none; margin: 0 1% 1% 0}
-    .megamenu .leftblock.sub_expanded > ul {border: none; box-shadow: none}
-    .megamenu .leftblock.sub_expanded ul.level1
+    /*sub categories expanded*/
+    .megamenu .leftblock.sub_expanded .submenu li.parent > a
+    {color: #000; font-weight: 600; text-transform: uppercase;}
+    .megamenu .leftblock.sub_expanded .submenu.level0 > li
+    {display: inline-block; vertical-align: top; float: none; margin: 0 1% 1% 0}
+    .megamenu .leftblock.sub_expanded > .submenu {border: none; box-shadow: none}
+    .megamenu .leftblock.sub_expanded .submenu.level1
     {z-index: auto; display: block !important; left: 0 !important; position: relative; min-width: 200px}
-	.megamenu .leftblock.sub_expanded ul.level2 {z-index: 2}
+    .megamenu .leftblock.sub_expanded .submenu.level2 {z-index: 2}
     .megamenu .leftblock.sub_expanded li.level2 a:before
     {content: '\e619'; font-family: "luma-icons"; font-size: 8px; font-weight: normal; padding-right: 5px; color: silver; }
-    
+    .megamenu .leftblock.sub_expanded .submenu.level0 .submenu {padding-left: 1em; }
+    .megamenu .mega .leftblock.sub_expanded .submenu
+    {border: medium none; box-shadow: none; display: block !important; position: relative; left: 0px !important}
+    .megamenu .leftblock.sub_expanded .submenu li a {padding: 2px 4px; }
+    .megamenu .leftblock.sub_expanded .submenu.level0 {border-right: 1px solid #ddd}    
     /*sub categories expanded with image*/
-    .megamenu .leftblock.sub_expanded_with_image ul.level1 {width: 90%}
-    .megamenu .leftblock.sub_expanded_with_image ul.level1 > li
-    {display: inline-block; vertical-align: top; min-width: 145px}
-    .megamenu .leftblock.sub_expanded_with_image ul.level0 li.level1 {display: flex;}
-    .megamenu .leftblock.sub_expanded_with_image ul.level0 li.level1 a img
-    {border: 1px solid #ccc; border-radius: 5px; display: table; height: 100px; width: 100px; margin: 10px 0px;}
-
+    .megamenu .leftblock.sub_expanded_with_image .submenu li img
+    {border: 1px solid #ddd; border-radius: 5px; display: inline-block; max-width: 25px; vertical-align: middle; margin-left: 10px; }
     /*sub categories menu*/
-    .megamenu .leftblock.sub_menu > ul > li > a {padding: 10px 20px; }
-    .megamenu .leftblock.sub_menu > ul > li {border-bottom: 1px solid #ccc; margin: 0; position: relative;}
-    .megamenu .leftblock.sub_menu > ul > li:last-child {border-bottom: none;}
-    .megamenu .leftblock.sub_menu > ul > li.parent > a > span.ui-icon:after
+    .megamenu .leftblock.sub_menu > .submenu > li > a {padding: 10px 20px; }
+    .megamenu .leftblock.sub_menu > .submenu > li {border-bottom: 1px solid #ccc; margin: 0; position: relative;}
+    .megamenu .leftblock.sub_menu > .submenu > li:last-child {border-bottom: none;}
+    .megamenu .leftblock.sub_menu > .submenu > li.parent > a > span.ui-icon:after
     {content: '\e619'; line-height: 20px; float: right; font-family: "luma-icons"; font-size: 10px;}
     .navigation .megamenu .level0 .submenu {z-index: 9}
-    .megamenu li.level0 ul.level0 {min-width: initial;}
-    .megamenu .mega .sub_expanded_with_image ul.level0 .submenu {min-width: initial;}
+    .megamenu li.level0 .submenu.level0 {min-width: initial;}
+    .megamenu .mega .sub_expanded_with_image .submenu.level0 .submenu {min-width: initial;}
+    .megamenu .leftblock.sub_menu > .submenu > li.parent .submenu li.parent > a > span:not(.ui-icon):after
+    {
+        color: inherit;
+        content: '\e622';
+        display: inline-block;
+        font-family: "luma-icons";
+        font-size: 10px;
+        font-weight: normal;
+        line-height: 12px;
+        margin: 0 0 0 5px;
+        overflow: hidden;
+        text-align: center;
+        vertical-align: middle;
+    }
 }
