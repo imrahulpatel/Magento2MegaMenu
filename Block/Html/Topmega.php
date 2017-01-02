@@ -194,7 +194,7 @@ class Topmega extends Topmenu
         
         $callParentSubmenu = true;
         $menuWidth = ($this->category->getMegaMenuWidth()) ? $this->category->getMegaMenuWidth() : '';
-        $html .= '<div class="megamenu-wrapper '.$menuWidth.'">';
+        $html .= '<div class="megamenu-wrapper page-products '.$menuWidth.'">';
         if($this->category->getMegaDisplayTopBlock()!='no' && $this->category->getMegaDisplayTopBlock()!=null)
         {
             $option = $this->category->getMegaDisplayTopBlock() ? $this->category->getMegaDisplayTopBlock() : '';
